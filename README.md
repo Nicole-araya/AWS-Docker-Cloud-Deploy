@@ -107,6 +107,9 @@ The `/data` endpoint proves that the application successfully reads its executio
 | **Local** (Docker Desktop) | `http://localhost:8080/data` | `Microservicio corriendo en el Host: Docker-Desktop-Local` |
 | **Cloud** (EC2 Public IP) | `http://[PUBLIC_IP]/data` | `Microservicio corriendo en el Host: [EC2_ID] - AWS-EC2` |
 
+![Docker Data Endpoint](https://github.com/Nicole-araya/AWS-Docker-Cloud-Deploy/blob/main/images/docker_desktop.png?raw=true)
+![AWS EC2 Data Endpoint](https://github.com/Nicole-araya/AWS-Docker-Cloud-Deploy/blob/main/images/aws_ec2.png?raw=true)
+
 The `/health` endpoint was verified in both environments with success (`{"status": "UP"}`).
 
 ### CloudWatch Monitoring
@@ -116,6 +119,7 @@ A critical operational requirement was met by setting up a monitoring alarm:
 * **Metric:** `CPUUtilization`
 * **Threshold:** Average **Greater than (>) 80%** over a 5-minute period.
 * **Action:** Triggers an email notification via an SNS Topic, simulating an automated alert to the operations team.
+![CloudWatch_Metrics](https://github.com/Nicole-araya/AWS-Docker-Cloud-Deploy/blob/main/images/alarm_metrics.png?raw=true)
 
 ## ⚠️ 5. Project Cleanup (Cost Management)
 
