@@ -7,12 +7,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class ServiceController {
 
     @GetMapping("/health")
-    public String healthCheck() { // Endpoint para Load Balancers y monitoreo
+    public String healthCheck() { 
         return "{\"status\": \"UP\"}";
     }
     @GetMapping("/data")
-    public String getData() { // Devuelve el nombre del host (del contenedor/máquina)
+    public String getData() { 
         String hostname = System.getenv("HOSTNAME") != null ? System.getenv("HOSTNAME") : "Local Machine";
         return "Microservicio corriendo en el Host: " + hostname;
     }
 }
+
