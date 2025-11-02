@@ -1,4 +1,4 @@
-# 🚀 Microservicio ICON(Intelligent Cloud Hosting)
+# 🚀 Microservice
 
 This mini-project demonstrates the full lifecycle of a mission-critical microservice, from development and containerization to consistent deployment and operational monitoring in the cloud.
 
